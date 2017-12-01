@@ -11,9 +11,9 @@ Day 01: 5th anniversary                   HV17-5YRS-4evr-IJHy-oXP1-c6Lw
 
 
 ## Day 01
-![](Desciptions/Day01.png)
+![](Desciptions/HV17-hv16-hv15-hv14.svg)
 
-Thanks to shiltemann for the writeups of the years 2014,2015 and 2016
+Thanks to shiltemann for the writeups of the years 2014,2015 and 2016 to get the flags
 
 ```
 Flag 2014: HV24-BAAJ-6ZtK-IJHy-bABB-YoMw
