@@ -6,9 +6,28 @@ Another edition of Hacking-Lab's annual advent calender CTF. Every day between D
 ```
 Title                                     Flag
 ----------------------------------------  -----------------------------
+Hidden: We are people, not machines    HV17-bz7q-zrfD-XnGz-fQos-wr2A
 Day 01: 5th anniversary                   HV17-5YRS-4evr-IJHy-oXP1-c6Lw
 ```
 
+## Hidden: We are people, not machines
+Go to [https://hackvent.hacking-lab.com/robots.txt](https://hackvent.hacking-lab.com/robots.txt) and you'll see ```We are people, not machines```.
+Follow this hint and go to [https://hackvent.hacking-lab.com/humans.txt](https://hackvent.hacking-lab.com/humans.txt).
+```
+All credits go to the following incredibly awesome HUMANS (in alphabetic order):
+avarx
+DanMcFly
+HaRdLoCk
+inik
+Lukasz
+M.
+Morpheuz
+MuffinX
+PS
+pyth0n33
+
+HV17-bz7q-zrfD-XnGz-fQos-wr2A
+```
 
 ## Day 01
 ![](Desciptions/HV17-hv16-hv15-hv14.svg)
