@@ -13,7 +13,8 @@ Day 01: 5th anniversary                   HV17-5YRS-4evr-IJHy-oXP1-c6Lw
 ## Day 01
 ![](Desciptions/HV17-hv16-hv15-hv14.svg)
 
-Thanks to shiltemann for the writeups of the years 2014,2015 and 2016 to get the flags
+Thanks to shiltemann for the writeups of the years 2014,2015 and 2016 to get the flags.
+[https://github.com/shiltemann/CTF-writeups-public](https://github.com/shiltemann/CTF-writeups-public)
 
 ```
 Flag 2014: HV24-BAAJ-6ZtK-IJHy-bABB-YoMw
