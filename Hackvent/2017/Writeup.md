@@ -9,6 +9,7 @@ Title                                     Flag
 Hidden: We are people, not machines       HV17-bz7q-zrfD-XnGz-fQos-wr2A
 Day 01: 5th anniversary                   HV17-5YRS-4evr-IJHy-oXP1-c6Lw
 Day 02: Wishlist                          HV17-Th3F-1fth-Pow3-r0f2-is32
+Day 03: Strange Logcat Entry              HV17-th1s-isol-dsch-00lm-agic
 ```
 
 ## Hidden: We are people, not machines
@@ -35,7 +36,7 @@ HV17-bz7q-zrfD-XnGz-fQos-wr2A
 Day 01: 5th anniversary
 time to have a look back
 
-![](Desciptions/HV17-hv16-hv15-hv14.svg)
+![](Ressources/HV17-hv16-hv15-hv14.svg)
 
 ### Solution
 Thanks to shiltemann for the writeups of the years 2014,2015 and 2016 to get the flags.
@@ -77,3 +78,21 @@ while True:
 ```
 Solution: HV17-Th3F-1fth-Pow3-r0f2-is32
 ```
+
+
+## Day 03
+## Description
+Day 03: Strange Logcat Entry
+Lost in messages
+
+I found those strange entries in my Android logcat, but I don't know what it's all about... I just want to read my messages!
+[logcat.txt](./Ressources/logcat.txt)
+
+## Solution
+Inside the logcat entries is one special interessting
+```
+11-13 20:40:24.044	137	  137  DEBUG: I 07914400000000F001000B913173317331F300003AC7F79B0C52BEC52190F37D07D1C3EB32888E2E838CECF05907425A63B7161D1D9BB7D2F337BB459E8FD12D188CDD6E85CFE931
+```
+
+This is a PDU message (SMS). With the help of [https://www.diafaan.com/sms-tutorials/gsm-modem-tutorial/online-sms-pdu-decoder/](https://www.diafaan.com/sms-tutorials/gsm-modem-tutorial/online-sms-pdu-decoder/) I was able to decode the message:
+![](Ressources/day03.png)
