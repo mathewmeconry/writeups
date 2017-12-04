@@ -12,7 +12,7 @@ Day 02: Wishlist                          HV17-Th3F-1fth-Pow3-r0f2-is32
 Day 03: Strange Logcat Entry              HV17-th1s-isol-dsch-00lm-agic
 Day 04: HoHoHo                            HV17-RP7W-DU6t-Z3qA-jwBz-jItj
 ```
-
+---
 ## Hidden: We are people, not machines
 Go to [https://hackvent.hacking-lab.com/robots.txt](https://hackvent.hacking-lab.com/robots.txt) and you'll see ```We are people, not machines```.
 Follow this hint and go to [https://hackvent.hacking-lab.com/humans.txt](https://hackvent.hacking-lab.com/humans.txt).
@@ -31,7 +31,7 @@ pyth0n33
 
 HV17-bz7q-zrfD-XnGz-fQos-wr2A
 ```
-
+---
 ## Day 01
 ### Description
 Day 01: 5th anniversary
@@ -51,7 +51,7 @@ Flag 2016: HV16-t8Kd-38aY-QxL5-bn4K-c6Lw
 ```
 Solution: HV17-5YRS-4evr-IJHy-oXP1-c6Lw
 ```
-
+---
 ## Day 02
 ### Description
 Day 02: Wishlist  
@@ -80,7 +80,7 @@ while True:
 Solution: HV17-Th3F-1fth-Pow3-r0f2-is32
 ```
 
-
+---
 ## Day 03
 ### Description
 Day 03: Strange Logcat Entry
@@ -99,7 +99,7 @@ This is a PDU message (SMS). With the help of [https://www.diafaan.com/sms-tutor
 
 ![](Ressources/day03.png)
 
-
+---
 ## Day 04
 ### Description
 Santa has hidden something for you [Here (Orignial)](./Ressources/HoHoHo_medium.pdf) [Here (Simplified)](./Ressources/HoHoHo.pdf)
