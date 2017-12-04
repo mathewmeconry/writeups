@@ -7,6 +7,7 @@ Another edition of Hacking-Lab's annual advent calender CTF. Every day between D
 Title                                     Flag
 ----------------------------------------  -----------------------------
 Hidden: We are people, not machines       HV17-bz7q-zrfD-XnGz-fQos-wr2A
+Hidden: 1984                              HV17-4llw-aysL-00ki-nTh3-H34d
 Day 01: 5th anniversary                   HV17-5YRS-4evr-IJHy-oXP1-c6Lw
 Day 02: Wishlist                          HV17-Th3F-1fth-Pow3-r0f2-is32
 Day 03: Strange Logcat Entry              HV17-th1s-isol-dsch-00lm-agic
@@ -31,6 +32,15 @@ pyth0n33
 
 HV17-bz7q-zrfD-XnGz-fQos-wr2A
 ```
+---
+## Hidden: 1984
+While trying a day which doesn't have a challenge I got a strange error message with a ressource #:
+![](Ressources/hidden_1984.png)
+
+Let's try to match #0 which is 1984 and it reveals the flag:
+
+![](Ressources/hidden_1984_2.png)
+
 ---
 ## Day 01
 ### Description
