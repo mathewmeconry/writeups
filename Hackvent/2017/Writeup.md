@@ -13,6 +13,7 @@ Day 02: Wishlist                          HV17-Th3F-1fth-Pow3-r0f2-is32
 Day 03: Strange Logcat Entry              HV17-th1s-isol-dsch-00lm-agic
 Day 04: HoHoHo                            HV17-RP7W-DU6t-Z3qA-jwBz-jItj
 Day 05: Only one hint                     HV17-7pKs-whyz-o6wF-h4rp-Qlt6
+Day 06: Santa's journey                   HV17-eCFw-J4xX-buy3-8pzG-kd3M
 ```
 ---
 ## Hidden: We are people, not machines
@@ -43,7 +44,7 @@ Let's try to match #0 which is 1984 and it reveals the flag:
 ![](Ressources/hidden_1984_2.png)
 
 ---
-## Day 01
+## Day 01: 5th anniversary   
 ### Description
 Day 01: 5th anniversary
 time to have a look back
@@ -63,7 +64,7 @@ Flag 2016: HV16-t8Kd-38aY-QxL5-bn4K-c6Lw
 Solution: HV17-5YRS-4evr-IJHy-oXP1-c6Lw
 ```
 ---
-## Day 02
+## Day 02: Wishlist
 ### Description
 Day 02: Wishlist  
 The fifth power of two
@@ -92,7 +93,7 @@ Solution: HV17-Th3F-1fth-Pow3-r0f2-is32
 ```
 
 ---
-## Day 03
+## Day 03: Strange Logcat Entry
 ### Description
 Day 03: Strange Logcat Entry
 Lost in messages
@@ -111,7 +112,7 @@ This is a PDU message (SMS). With the help of [https://www.diafaan.com/sms-tutor
 ![](Ressources/day03.png)
 
 ---
-## Day 04
+## Day 04: HoHoHo
 ### Description
 Santa has hidden something for you [Here (Orignial)](./Ressources/HoHoHo_medium.pdf) [Here (Simplified)](./Ressources/HoHoHo.pdf)
 
@@ -236,4 +237,33 @@ for key in keys:
 ```
 ```
 Solution: HV17-7pKs-whyz-o6wF-h4rp-Qlt6
+```
+---
+## Day 06: Santa's journey
+### Description
+Follow Santa Claus as he makes his journey around the world.  
+[http://challenges.hackvent.hacking-lab.com:4200/](http://challenges.hackvent.hacking-lab.com:4200/)
+
+### Solution
+Let's be silly and just parse all QR-Codes until the flag occurs (It worked!)
+
+```python
+import qreader
+import requests
+import sys
+from io import BytesIO
+
+countries = {}
+while True:
+    url = 'http://challenges.hackvent.hacking-lab.com:4200/'
+    content = requests.get(url).content
+
+    data = qreader.read(BytesIO(content))
+    print(data)  # prints "Version 2"
+    if "HV17" in data:
+        print('Found the flag: ' + data)
+        sys.exit()
+```
+```
+Solution: HV17-eCFw-J4xX-buy3-8pzG-kd3M
 ```
