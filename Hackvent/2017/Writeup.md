@@ -118,8 +118,8 @@ Santa has hidden something for you [Here (Orignial)](./Ressources/HoHoHo_medium.
 In the PDF is a custom font embedded. In the simplified version, it is an attachment.
 Open the font in Fontforge and you'll see that it doesn't have all availabe chars in it. But it has a lot of unprintable...
 
-![](day04.png)
+![](./Ressources/day04.png)
 
 After playing a bit with the display options and enabling "Fit to font bounding box" of Fontforge I was able to show their content and voilà
 
-![](day04_solution.png)
+![](./Ressources/day04_solution.png)
