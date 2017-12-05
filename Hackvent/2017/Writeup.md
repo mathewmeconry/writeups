@@ -124,7 +124,9 @@ Open the font in Fontforge and you'll see that it doesn't have all availabe char
 After playing a bit with the display options and enabling "Fit to font bounding box" of Fontforge I was able to show their content and voilà
 
 ![](./Ressources/day04_solution.png)
-
+```
+Solution: HV17-RP7W-DU6t-Z3qA-jwBz-jItj
+```
 ---
 ## Day 05
 ### Description
