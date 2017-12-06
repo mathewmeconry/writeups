@@ -245,6 +245,7 @@ Follow Santa Claus as he makes his journey around the world.
 [http://challenges.hackvent.hacking-lab.com:4200/](http://challenges.hackvent.hacking-lab.com:4200/)
 
 ### Solution
+The URL returns a random QR code which resolves to the name of a country.  
 Let's be silly and just parse all QR-Codes until the flag occurs (It worked!)
 
 ```python
