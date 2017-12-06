@@ -15,6 +15,7 @@ Day 03: Strange Logcat Entry              HV17-th1s-isol-dsch-00lm-agic
 Day 04: HoHoHo                            HV17-RP7W-DU6t-Z3qA-jwBz-jItj
 Day 05: Only one hint                     HV17-7pKs-whyz-o6wF-h4rp-Qlt6
 Day 06: Santa's journey                   HV17-eCFw-J4xX-buy3-8pzG-kd3M
+Day 07: i know ...                        HV17-UCyz-0yEU-d90O-vSqS-Sd64
 ```
 ---
 ## Hidden 01: We are people, not machines
@@ -323,4 +324,33 @@ while True:
 ```
 ```
 Solution: HV17-eCFw-J4xX-buy3-8pzG-kd3M
+```
+---
+## Day 07: i know ...
+... what you did last xmas
+### Description
+We were able to steal a file from santas computer. We are sure, he prepared a gift and there are traces for it in this file.
+
+Please help us to recover it:
+
+[SANTA.FILE](./Ressources/SANTA.FILE)
+
+### Solution
+```file SANTA.FILE``` describes it as a zip:
+```
+SANTA.FILE: Zip archive data, at least v1.0 to extract
+```
+After unzip I've got the file SANTA.IMA which is according to ```file``` a 
+```
+SANTA.IMA: DOS/MBR boot sector
+```
+
+Let's be once again silly and check if the flag is direct inside this image:
+```bash
+$ hexdump -C SANTA.IMA | grep -A 1 "HV17"
+000a7f90  65 6e 74 5c 48 56 31 37  2d 55 43 79 7a 2d 30 79  |ent\HV17-UCyz-0y|
+000a7fa0  45 55 2d 64 39 30 4f 2d  76 53 71 53 2d 53 64 36  |EU-d90O-vSqS-Sd6|
+```
+```
+Solution: HV17-UCyz-0yEU-d90O-vSqS-Sd6
 ```
