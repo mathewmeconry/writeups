@@ -6,8 +6,9 @@ Another edition of Hacking-Lab's annual advent calender CTF. Every day between D
 ```
 Title                                     Flag
 ----------------------------------------  -----------------------------
-Hidden: We are people, not machines       HV17-bz7q-zrfD-XnGz-fQos-wr2A
-Hidden: 1984                              HV17-4llw-aysL-00ki-nTh3-H34d
+Hidden 01: We are people, not machines    HV17-bz7q-zrfD-XnGz-fQos-wr2A
+Hidden 03: 1984                           HV17-4llw-aysL-00ki-nTh3-H34d
+Hidden 05: Gift                           HV17-UH4X-PPLE-ANND-IH4X-T1ME
 Day 01: 5th anniversary                   HV17-5YRS-4evr-IJHy-oXP1-c6Lw
 Day 02: Wishlist                          HV17-Th3F-1fth-Pow3-r0f2-is32
 Day 03: Strange Logcat Entry              HV17-th1s-isol-dsch-00lm-agic
@@ -16,7 +17,7 @@ Day 05: Only one hint                     HV17-7pKs-whyz-o6wF-h4rp-Qlt6
 Day 06: Santa's journey                   HV17-eCFw-J4xX-buy3-8pzG-kd3M
 ```
 ---
-## Hidden: We are people, not machines
+## Hidden 01: We are people, not machines
 Go to [https://hackvent.hacking-lab.com/robots.txt](https://hackvent.hacking-lab.com/robots.txt) and you'll see ```We are people, not machines```.
 Follow this hint and go to [https://hackvent.hacking-lab.com/humans.txt](https://hackvent.hacking-lab.com/humans.txt).
 ```
@@ -35,13 +36,68 @@ pyth0n33
 HV17-bz7q-zrfD-XnGz-fQos-wr2A
 ```
 ---
-## Hidden: 1984
+## Hidden 03: 1984
 While trying a day which doesn't have a challenge I got a strange error message with a ressource #:
 ![](Ressources/hidden_1984.png)
 
 Let's try to match #0 which is 1984 and it reveals the flag:
 
 ![](Ressources/hidden_1984_2.png)
+
+---
+## Hidden 05: Gift
+Thanks to Day 06 I've got a new domain to play with: challenges.hackvent.hacking-lab.com
+After a portscan it reveils that telnet is open
+```bash
+nmap -Pn -F challenges.hackvent.hacking-lab.com
+```
+```
+Starting Nmap 7.60 ( https://nmap.org ) at 2017-12-06 20:31 CET
+Nmap scan report for challenges.hackvent.hacking-lab.com (80.74.140.188)
+Host is up (0.041s latency).
+rDNS record for 80.74.140.188: urb80-74-140-188.ch-meta.net
+Not shown: 96 filtered ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+23/tcp  open  telnet
+80/tcp  open  http
+443/tcp open  https
+
+Nmap done: 1 IP address (1 host up) scanned in 4.26 seconds
+```
+
+After the connection it plays a little "video" with Santa who wants to give me a gift. Unfortunately I need to assemble it by myself. But it is freaking fast. Python will help with this:
+```python
+from socket import *
+
+host = "challenges.hackvent.hacking-lab.com"
+s = socket(AF_INET, SOCK_STREAM)
+s.connect((host, 23))
+flag = open('flag.txt', 'w')
+active = False
+print('Aquiring flag')
+print('Please wait...')
+while True:
+	data = s.recv(2048)
+	if active == True:
+		flag.write(data)
+
+	if "OWN." in data:
+		active = True
+		print('Flag saving activated')
+	if data.encode('utf-8') == "":
+		print('Flag aquired. see in flag.txt')
+		break
+```
+```
+Aquiring flag
+Please wait...
+Flag saving activated
+Flag quired. see in flag.txt
+```
+```
+Solution: HV17-UH4X-PPLE-ANND-IH4X-T1ME
+```
 
 ---
 ## Day 01: 5th anniversary   
