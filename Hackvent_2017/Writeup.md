@@ -1,4 +1,4 @@
-# HackVent 2016
+# HackVent 2017
 
 Another edition of Hacking-Lab's annual advent calender CTF. Every day between December 1 and Christmas, a new challenge is released. Solve it on the day of release for maximum points, solve it later (but before the new year) for one point less.
 
