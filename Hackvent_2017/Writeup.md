@@ -103,9 +103,9 @@ Solution: HV17-UH4X-PPLE-ANND-IH4X-T1ME
 
 ---
 ## Day 01: 5th anniversary   
-### Description
-Day 01: 5th anniversary
 time to have a look back
+
+### Description
 
 ![](Ressources/HV17-hv16-hv15-hv14.svg)
 
@@ -123,9 +123,9 @@ Solution: HV17-5YRS-4evr-IJHy-oXP1-c6Lw
 ```
 ---
 ## Day 02: Wishlist
-### Description
-Day 02: Wishlist  
 The fifth power of two
+
+### Description
 
 [Wishlist.txt](./Ressources/Wishlist.txt)
 
@@ -152,9 +152,9 @@ Solution: HV17-Th3F-1fth-Pow3-r0f2-is32
 
 ---
 ## Day 03: Strange Logcat Entry
-### Description
-Day 03: Strange Logcat Entry
 Lost in messages
+
+### Description
 
 I found those strange entries in my Android logcat, but I don't know what it's all about... I just want to read my messages!
 [logcat.txt](./Ressources/logcat.txt)
