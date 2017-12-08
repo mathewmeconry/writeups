@@ -16,6 +16,7 @@ Day 04: HoHoHo                            HV17-RP7W-DU6t-Z3qA-jwBz-jItj
 Day 05: Only one hint                     HV17-7pKs-whyz-o6wF-h4rp-Qlt6
 Day 06: Santa's journey                   HV17-eCFw-J4xX-buy3-8pzG-kd3M
 Day 07: i know ...                        HV17-UCyz-0yEU-d90O-vSqS-Sd64
+Day 08: True 1337s                        HV17-th1s-ju5t-l1k3-j5sf-uck!
 ```
 ---
 ## Hidden 01: We are people, not machines
@@ -353,4 +354,53 @@ $ hexdump -C SANTA.IMA | grep -A 1 "HV17"
 ```
 ```
 Solution: HV17-UCyz-0yEU-d90O-vSqS-Sd6
+```
+---
+## Day 08: True 1337s
+... can read this instantly
+### Description
+I found this obfuscated code on a public FTP-Server. But I don't understand what it's doing...
+
+[Download]('./Ressources/True.1337')
+
+### Solution
+After analyzing the obfuscation I found out the pattern.
+```
+True = 1
+chr = chr
+exec = exec
+__1337 = exec
+_1337 = chr
+```
+
+So lets code a deobfuscator which generates another python3 script.
+```python
+code = ''
+true.replace('exec(', '')
+
+for ch in true.split('chr('):
+    code += chr(len(ch.split('+')) - 1)
+
+
+leed.replace('__1337(', '')
+for lee in leed.split('_1337('):
+    code += chr(len(lee.split('+')) - 1)
+
+code = code.replace(b'\0', '')
+c = open('day08-code.py', 'w')
+c.write(code)
+print('Run python3 day08-code.py')
+print('Enter 1787569 and press Enter')
+print('Have fun with the flag')
+```
+You can find the complete code here: [day08.py](./Ressources/day08.py)
+
+This scripts generates a new python script which is the deobfuscated script. Run it and enter 1787569
+```bash
+$ python3 day08-code.py
+?1787569
+HV17-th1s-ju5t-l1k3-j5sf-uck!
+```
+```
+Solution: HV17-th1s-ju5t-l1k3-j5sf-uck!
 ```
